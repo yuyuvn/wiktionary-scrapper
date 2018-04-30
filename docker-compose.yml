@@ -1,0 +1,9 @@
+version: '3'
+services:
+  app:
+    build: .
+    command: /bin/sh -c "ruby scrapper.rb"
+    volumes:
+      - ./output:/app/output
+    stdin_open: true
+    tty: true
